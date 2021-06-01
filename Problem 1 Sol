@@ -1,0 +1,12 @@
+
+# Question 1: Write a Python program to read a file line by line and store it into a list.
+
+
+file_obj=open("file_name.txt",'r') # File name is file_name
+storage=[]  
+while True:
+    line_content=file_obj.readline() # Reading the file line by line
+    storage.append(line_content)  # Appending it in list
+file_obj.close()
+print(storage)
+    
