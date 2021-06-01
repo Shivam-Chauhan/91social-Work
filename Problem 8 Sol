@@ -1,0 +1,27 @@
+Question 8: Program to Generate random logs and write in a file , once the file size reaches 2Mb open new file and continue writing
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Code :- 
+
+import os
+import math
+file_number=0  # Used to create the mutiple file name
+file_name="\Log"+str(file_number)  # Generating the file names as Log0, Log1....
+url=r'C:\Users\Shivam Chauhan\Desktop'  # url of the file
+url+=file_name
+file=open(url,"w")
+size=os.path.getsize(url)
+ct=0
+while True:
+    # Random Text is inputed into the file as a Random Log Cred
+    file.writelines("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fames ac turpis egestas integer eget aliquet nibh. Blandit massa enim nec dui nunc. Et netus et malesuada fames ac turpis egestas. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Pretium aenean pharetra magna ac placerat. Sagittis aliquam malesuada bibendum arcu vitae elementum. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. In est ante in nibh mauris cursus. Ut porttitor leo a diam sollicitudin tempor id. Commodo elit at imperdiet dui accumsan sit. Donec adipiscing tristique risus nec feugiat in fermentum. Neque sodales ut etiam sit amet. Senectus et netus et malesuada fames ac turpis egestas maecenas. Duis ultricies lacus sed turpis tincidunt id aliquet. Quam quisque id diam vel. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Auctor eu augue ut lectus arcu bibendum at varius vel. Diam ut venenatis tellus in metus vulputate eu scelerisque. Rhoncus mattis rhoncus urna neque viverra justo nec.")
+    if (size/10**6)<1.9:  # If File Size greater than 1.9 MB than switch the file 
+        file.close()
+        file_number+=1
+        file_name="\Log"+str(file_number)
+        url=r'C:\Users\Shivam Chauhan\Desktop'
+        url+=file_name
+        file=open(url,"w")  # Opening the file using multiple file_names
+    
+    
+print("Success!")
