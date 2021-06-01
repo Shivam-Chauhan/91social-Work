@@ -1,0 +1,23 @@
+# Question 2: Write a Python program to calculate the number of days between two dates. Sample dates : (20200702), (20200711)
+
+
+
+
+import datetime
+date1="20200702"
+date2="20200711"
+
+d_date1=int(date1[:2])
+y_date1=int(date1[2:6])
+m_date1=int(date1[6:])
+date1_obj=datetime.date(y_date1,m_date1,d_date1)  # Creating the 1st date object
+
+d_date2=int(date2[:2])
+y_date2=int(date2[2:6])
+m_date2=int(date2[6:])
+date2_obj=datetime.date(y_date2,m_date2,d_date2)  # Creating the 2nd date object
+print((date2_obj-date1_obj).days)   # Difference of Days 
+
+
+# Output
+# 273 
