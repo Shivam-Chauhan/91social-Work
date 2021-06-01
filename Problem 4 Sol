@@ -1,0 +1,23 @@
+ Question 4: Write a Python program to sort a list of dictionaries using Lambda.
+ Original list of dictionaries :
+ [{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Mi Max', 'model': '2',
+'color': 'Gold'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
+
+ Sorting the List of dictionaries :
+ [{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Samsung', 'model': 7,
+'color': 'Blue'}, {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}]
+
+
+
+
+list1=[
+    {'make': 'Nokia', 'model': 216, 'color': 'Black'}, 
+    {'make': 'Mi Max', 'model': '2','color': 'Gold'}, 
+    {'make': 'Samsung', 'model': 7, 'color': 'Blue'} ]
+
+sort_list=sorted(list1,key=lambda i: (i['color'],i['make']))  # Sorting first with the 'colors' than with the 'make'
+print(sort_list)
+
+
+# Output
+# [{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}, {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}]
