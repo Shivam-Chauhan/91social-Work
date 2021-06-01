@@ -1,0 +1,21 @@
+ Question 5: Write a Python program that takes a text file as input and returns the number of
+words of a given text file.
+Note: Some words can be separated by a comma with no space.
+
+
+CODE :- 
+
+import re
+string = "My name is Shivam Chauhan,I am a programmer" 
+string_fil=list(re.split(r'(\s|\,)',string.strip()))
+
+while ' ' in string_fil:                                  # Removing the spaces 
+    string_fil.remove(' ')
+
+while ',' in string_fil:                                  # Removing the commas
+    string_fil.remove(',')
+
+print(string_fil)
+
+# Output
+# ['My', 'name', 'is', 'Shivam', 'Chauhan', 'I', 'am', 'a', 'programmer']
