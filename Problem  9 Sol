@@ -1,0 +1,23 @@
+Question 9: Script to ping and check whether any given IPs are active, also whether given set of software are installed in the existing system ( like java, kubectl, aws etc)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Code :- 
+
+
+import requests
+from shutil import which
+
+    
+res=os.popen("ping google.com").read()  # Name of website or it can be an IP
+if "0%" in res:
+    print("Success!!")
+else:
+    print("Failure.")
+
+# Finding an Executable is installed in system using find_executable command
+print("Next Command ")
+print()
+name="VSCode"  # Name of software you want to check
+print(which(name) is not None)  
+
